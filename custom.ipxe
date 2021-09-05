@@ -16,12 +16,12 @@ goto end
 :option_one
 imgfree
 kernel https://boot.palp.la/memdisk iso raw
-initrd http://boot.palp.org/iso/AVL.iso
+initrd https://boot.palp.org/iso/AVL.iso
 boot || goto end
 
 :option_two
 imgfree
-sanboot http://boot.palp.org/iso/volumio.img
+sanboot https://boot.palp.org/iso/volumio.img
 goto end
 
 :end
