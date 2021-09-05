@@ -14,13 +14,13 @@ goto ${boot_choice}
 goto end
 
 :option_one
-kernel https://boot.netboot.xyz/memdisk raw iso
-initrd https://palp.org/boot/AVL-MXE-2021.06.18-xfce4-openbox-amd64.iso
+kernel https://boot.netboot.xyz/memdisk iso raw
+initrd https://palp.org/boot/AVL.iso
 boot || goto custom_exit
 
 :option_two
-kernel https://boot.netboot.xyz/memdisk raw img
-initrd https://palp.org/boot/volumio-2.907-2021-07-02-x86.img
+kernel https://boot.netboot.xyz/memdisk iso raw
+initrd https://palp.org/boot/volumio.img
 boot || goto custom_exit
 
 :end
