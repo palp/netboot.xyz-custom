@@ -4,9 +4,24 @@
 ###
 
 :start
-echo Hello world!
-sleep 10
-goto custom_exit
+clear boot_choice
+menu Select Boot Option
+item option_one ${space} AV Linux
+item option_two ${space} Volumio
+choose boot_choice || goto end
+echo ${cls}
+goto ${boot_choice}
+goto end
 
-:custom_exit
+:option_one
+kernel https://boot.netboot.xyz/memdisk raw iso
+initrd https://palp.org/images/AVL-MXE-2021.06.18-xfce4-openbox-amd64.iso
+boot || goto custom_exit
+
+:option_two
+kernel https://boot.netboot.xyz/memdisk raw img
+initrd https://palp.org/images/volumio-2.907-2021-07-02-x86.img
+boot || goto custom_exit
+
+:end
 exit 0
