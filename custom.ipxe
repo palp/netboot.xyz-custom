@@ -24,4 +24,5 @@ initrd https://palp.org/boot/volumio.img
 boot || goto custom_exit
 
 :end
-exit 0
+chain utils.ipxe
+exit
