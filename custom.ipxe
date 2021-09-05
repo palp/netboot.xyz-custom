@@ -16,7 +16,7 @@ goto end
 :option_one
 imgfree
 kernel https://boot.palp.la/memdisk iso raw
-initrd https://boot.palp.ls/iso/AVL.iso
+initrd https://boot.palp.la/iso/AVL.iso
 boot || goto end
 
 :option_two
