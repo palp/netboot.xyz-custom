@@ -14,15 +14,15 @@ goto ${boot_choice}
 goto end
 
 :option_one
-kernel https://boot.netboot.xyz/memdisk iso raw
-initrd https://palp.org/boot/AVL.iso
+imgfree
+kernel https://boot.palp.la/memdisk iso raw
+initrd http://boot.palp.org/iso/AVL.iso
 boot || goto end
 
 :option_two
-kernel https://boot.netboot.xyz/memdisk iso raw
-initrd https://palp.org/boot/volumio.img
-boot || goto end
+imgfree
+sanboot http://boot.palp.org/iso/volumio.img
+goto end
 
 :end
-chain utils.ipxe
 exit
