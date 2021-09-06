@@ -15,8 +15,8 @@ goto end
 
 :option_one
 imgfree
-kernel https://boot.palp.la/memdisk iso raw
-initrd https://boot.palp.la/iso/AVL.iso
+kernel https://boot.palp.la/avlinux/antiX/vmlinuz
+initrd https://boot.palp.la/avlinux/antiX/initrd.gz
 boot || goto end
 
 :option_two
